@@ -1,0 +1,77 @@
+				DataType
+				   |
+	-------------------------------------------------------------
+1) Primitive					2) Non-Primitive	
+(Bult-In)					(User Defined DataType)
+
+						struct---C Lang
+						 |
+						class---C++
+						 |
+--->boolean(true/false)				class--->UD_DataType--Java Class		
+--->byte--[ASCII]--A--65
+--->char
+--->short
+--->int
+--->long
+--->float
+--->double
+-----------------------
+
+    Default Type		
+	|			 |
+----------------------------------------------------
+10--[int]		|	10L
+12.21--[double]		|	12.21f
+------------------------------------------------------------------------------------------
+Class Design:-
+----------------
+	
+	1) Define Package---Optional
+	2) import statements
+	3) define own class
+	4)	define main method in side class
+
+
+javac A.java			javac B.java
+java A;//Error--main		java B;// run success--main()	
+   |	
+---------------------		---------------------
+class A				class B
+{				{
+	int no;				PSVM()
+}					{
+						A obj = new A();
+						obj.no=100;
+
+					}
+				}
+
+
+
+class:-
+------
+
+		Data---Student/Employee/Client/Product/Vehicle/Fruit
+
+
+			Data Member's
+			     |
+		    ------------------------	
+	Student---->[rno 	name 	std]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
