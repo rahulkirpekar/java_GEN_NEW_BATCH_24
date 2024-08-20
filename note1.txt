@@ -77,11 +77,41 @@ Passcode: %DrDnP=6
 https://us02web.zoom.us/rec/share/VdWvjiyJ--cBMTRJa1-5PCs2xnVs3cDoXsi9JVzly1daBH7eIj3Y3GevEMoM-Fo.l8Mc7Cy0lWPw7x4T?startTime=1723552815000
 Passcode: 3m=$?nR3
 
+20/8/24
+------------
+https://us02web.zoom.us/rec/share/CzfKmrBeqG08rpRdS8DjJQCZBSE1OPIeuLqBFuHp2LnjifFozH-sPjQ5ueLRjAOv.AebH7pne4egcj95q 
+Passcode: 7D.yxxY6
 
 
 
 
 
+Type of Variable:-
+------------------
+
+1) local variable:-
+--------------------
+
+2) Dm's
+
+
+
+-------------------------------
+
+3) class level variable
+
+4) constant varibale
+
+
+Constructor:-
+-------------
+
+1) Default	2) Para	+ Copy	
+
+
+	Student s= new Student();
+
+	s.disp();
 
 
 
