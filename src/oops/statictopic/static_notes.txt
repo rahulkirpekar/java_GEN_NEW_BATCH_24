@@ -1,0 +1,104 @@
+static----X
+------------
+Student
+	rno;//Per Object
+	name;//Per Object
+	std;//Per Object
+	static String schoolName = "DPS";---ONE COPY---ONE CLASS
+Student---[s1,s2,s3,s4,s5]---500 students--500-objects
+
+    s1		      s2	      s3	      s4		s5
+---------------------------------------------------------------------------------
+rno=1		|rno		|rno		|rno		|rno		|--UNIQUE
+name		|name		|name		|name		|name		|--UNIQUE
+std		|std		|std		|std		|std		|--UNIQUE
+---------------------------------------------------------------------------------
+				schoolName="DPS"					|--ONE COPY For ONE CLASS
+--------------------------------------------------------------------------------- 500 objects * 3 = 1500Bytes	
+ClassName.schoolName
+
+s1.rno=1;		SOP(s2.rno)=0
+s1.schoolName="DPS";	SOP(s2.schoolName)="DPS";
+
+s1--rno			s2--rno
+s1.schoolName		s2.schoolName
+
+
+s1.rno=1		s2.rno=?
+s1.schoolName=DPS	s2.schoolName=?
+
+
+
+
+s1
+s1.rno=1
+s1.schoolname=DPS
+s2
+s2.rno=1
+s2.schoolname=DPS
+-------------------------
+s1.rno = 1
+s1.schoolName = "DPS"
+s2.rn0 = 0
+s2.schoolName = "DPS
+---------------------
+s1.rno = 1
+s1.schoolName = DPS
+
+s2.rno=0
+s2.schoolName = DPS
+----------------------------
+s1.rno = 1; s2.rno = 0 s1.schoolname = dps , s2.schoolname = null
+----------------------------
+s1.rno=1;                       s2.rno=0
+
+s1.schoolname=DPS    s1.schoolname=DPS
+----------------------------
+s1.rno= 1
+s1.schoolName=DPS
+
+s2.rno= 0
+s2.schoolName=DPS
+----------------------------
+s1.rno=1; s1.schoolname=DPS                s2.rno=0;s2.schoolname=DPS
+----------------------------
+s1.rno = 1		s2.rno = 0
+s1.schoolName = DPS	s2.schoolName = DPS
+-------------------------------
+Akash_ojha 18:27
+s1.rno = 1
+s1.schoolName = DPS
+
+s2.rno=0
+s2.schoolName = DPS
+----------------------------
+
+s1.rno = 1
+s1.schoolName = DPS
+
+s2.rno=0
+s2.schoolName = DPS
+
+Priyanshi  to  Everyone 18:27
+s1.rno = 1;
+s2.rno = 0 s1.schoolname = dps , s2.schoolname = null
+------------------------------
+Saniya Patel 18:27
+s1.rno= 1
+s1.schoolName=DPS
+------------------------------
+s2.rno= 0
+s2.schoolName=DPS
+-----------------------------------
+-->load class JVM
+
+	static---schoolName
+	  |
+	main
+	  |
+ create object--s1[rno name std]	
+	  |
+	s1.scanData();//---schoolName
+	s2.dispData();
+
+	Student.setSchoolName("DPS");
