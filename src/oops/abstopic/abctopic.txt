@@ -1,0 +1,79 @@
+Abstraction:-   increase Application security.
+-------------
+
+		   login
+		     |	
+		----------------
+		SBI Application
+
+
+
+		 user
+		  |-msg
+		WhatsApp
+		  |
+		End-User--msg
+
+
+
+		Client(AccountHolder)
+		   |
+		  role
+		   |
+		Bank(Application)
+
+
+		Driver(User)
+		 |
+		Car---Engine Flow
+		 |
+		Tier---puncher
+
+
+
+
+			Type of Abstraction
+			---------------------
+
+----------------			----------------
+1) 0 to 100%				2) 100% 
+----------------			---------------- 
+==> Abstract class			==> interface(pure abstract class)
+
+abstract class A
+{
+	void test()
+	{
+
+	}
+}
+
+
+			Person(void getBehave(){})--General behaviout applay
+			  |
+  ----------------------------------------------------------------------
+  |			|			|			|
+Home	       	       Org      	      School  	   	      PublicPlace
+getBehave()         getBehave()              getBehave()              //getBehave()<---Overridde
+getSocialEvent()    getTaskInfo()	     getHomeWork()	      getPublicEvent()			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

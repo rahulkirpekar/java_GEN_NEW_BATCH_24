@@ -1,0 +1,235 @@
+polymorphism:- Ability to take more than  one form(method).
+-----------------
+
+			Type of polymorphism
+			--------------------
+----------------			----------------
+1) CompileTime				2) RunTime
+----------------			----------------
+==>Static Binding			==>Dynamic Binding
+==>Early Binding			==>Late Binding
+
+Example:-			Example:-
+---------			---------
+	===>Method Overloadding		===>Method Overrdding	
+	
+
+		CLang			C---B
+		C++Lang
+		Java
+		AdvJava
+		Datascience
+	Royal---python---Faculty
+
+
+
+
+Amazon
+
+	addition
+
+			Method Overloadding(Different Method Version)
+			  |
+	Calc--class	  |
+		A---void addFun(int no1,int no2)
+		B---void addFun(10,20,30)
+		B---void addFun(float no1,float no2)
+
+
+		C---void addFun(10,20,30,40)
+
+Type Pramotion Rule
+----------------------
+boolean---X
+		byte
+		 |
+		short
+		 |
+char------------>int
+		 |
+		long
+		 |
+		float
+		 |
+		double
+
+2) RunTime Polymorphism:-
+---------------------------
+
+
+			Person(void getBehave(){})
+			  |
+  ----------------------------------------------------------------------
+  |			|			|			|
+Home	       	       Org      	      School  	   	      PublicPlace
+getBehave()         getBehave()              getBehave()              getBehave()
+getSocialEvent()    getTaskInfo()	     getHomeWork()	      getPublicEvent()			
+		 
+  |		|			|			|
+Son/Daughter  Employee		      Student		     Citizen	
+
+
+Person person = new Home();
+person.getBehave();
+
+Home home = (Home)person;// chances to get ClassCastException
+home.getSocialEvent();
+
+
+
+			son/Daugher		
+		  	  |
+			 Home	
+		  	  |
+Org(Employee)<---------person(getBahave())----------School(Student)
+		  	  |
+		      PublicPlace
+		  	  |
+			Citizen
+
+
+
+
+
+		A(test1(),test2())
+		|
+	------------------
+	|		|
+	B		C
+     test1()		test1()<---Overridde		
+     test3()		test4()
+
+
+	A obj = new B();
+
+	obj.test1();//  1) CompileTime Pass(reference variable type)
+			2) Runtime(object---B---test1()---B)
+
+
+	obj.test3();//C.E
+
+
+	if(obj instanceof B)
+	{
+		B objB = (B)obj;
+		objB.test3();
+	}
+
+
+
+
+obj = new C();
+
+					// C.E
+					C obj = new A();
+
+
+A obj1 = new A();
+B obj2 = new B();
+C obj3 = new C();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			RbiBank(int getROI(){  return 0; })
+			  |
+  -------------------------------------------------------
+  |		|			|		|
+AxisBank     KotakBank		    SbiBank	     BankOfBaroda
+getNoOfBranch();
+	   getKotakCreditCard();  getSbiPrivateLoan();  getBOBCarLoan();
+
+getROI()     getROI()                getROI()        getROI()
+  |		|			|		|
+  12           10                       9               11
+	
+			
+	
+RbiBank bank = new AxisBank();
+
+bank.getROI();
+
+if(bank instanceof AxisBank)
+{
+	AxisBank  axisBank = (AxisBank)bank;
+	axisBank.getNoOfAxisBranch();
+
+}else if(bank instanceof KotakBank)
+{
+	KotakBank  kotakBank = (KotakBank)bank;
+	kotakBank.getKotakCreditCard();	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+

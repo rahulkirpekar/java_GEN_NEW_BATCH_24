@@ -1,0 +1,21 @@
+Console Ban kApplication:-
+----------------------------
+
+				     |--(deposite(),withdraw(),displayInfo())
+				     |--(accountHolder,balance)
+				   Account
+				   	 |
+	--------------------------------------
+	|									|
+SavingAccount					  CurrentAccount
+	|									|
+interestRate	 			   	  overdraftLimit<---Data Members
+	|									|
+calculateInterest()					withdraw()
+displayInfo()						displayInfo()
+
+				
+				BankApplication 
+				
+				1) SavingAccount
+				2) CurrentAccount

@@ -1,0 +1,48 @@
+Array Limitations:-
+-------------------
+	int a[] = new int[5];
+
+	1) DataType---TypeSafe
+	2) SIZE
+	
+Collection Framework:-----To overcome Array Limitations.
+----------------------
+
+			Hierarchy of Collection --"java.util.*"
+			-----------------------
+
+				Iterable(I)--------------------------------------------------------------
+				   |									|
+				Collection(I)								|
+				   |									|
+				   |Data--Store--Value							|
+				   |									|
+	---------------------------------------------------------					|
+	|			   |				|					|
+      List(I)			Set(I)			      Queue(I)					Map(I)(Key,Value)
+	|			   |				|					|
+    AbstractList(AC)	        AbstractSet(AC)		   AbstractQueue(AC)			     AbstractMap(AC)	
+	|			   |				|					|
+---ArrayList(C)		     ---HashSet(C)		---PriorityQueue(C)			     --HashMap(C)	
+---LinkedList(C)	     ---LinkedHashSet(C)						     --LinkedHashMap(C)
+---Vector(C)		     ---TreeSet(C)							     --TreeMap(C)	
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

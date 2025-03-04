@@ -1,0 +1,63 @@
+Abstraction:-
+---------------
+		Type of Abstrcation
+		--------------------
+			|	
+	--------------------------------------
+	    |			   |	
+	-------------		-------------	
+	Abstract class		interface(pure abstract class)
+	-------------		-------------
+	1) 0 to 100%		2) 100%	Abstraction
+
+
+interface(100%	Abstraction):-
+--------------------------------
+
+	1) Dm's---[public static final]---constant variables
+
+	2) Mf's:-
+	----------
+		1) Abstract Methods---[public abstract]
+		2) Non-Abstract Methods
+			Java_8+
+				==>static method(8th version)
+				==>default method(8th version)
+			java_9+
+				==>static method
+				==>default method
+				==>private method(9th version)
+--------------------------------------------------------------------------------------------------------
+	class-A		interface-A		interface-A	class-A			
+	 |--extends	  |--implements		  |-extends	  |---X(Not-Possible in java)
+	class-B		class-B			interface-B	interface-B	
+--------------------------------------------------------------------------------------------------------
+class A				interface A
+{				{
+
+
+}				}
+
+
+
+
+
+			Person(void getBehave(){})<---Abstrcation--interface
+			  |
+  ----------------------------------------------------------------------
+  |			|			|			|
+Home	       	       Org      	      School  	   	      PublicPlace
+getBehave()         getBehave()              getBehave()              getBehave()
+getSocialEvent()    getTaskInfo()	     getHomeWork()	      getPublicEvent()	
+
+
+
+
+
+
+
+
+
+
+
+

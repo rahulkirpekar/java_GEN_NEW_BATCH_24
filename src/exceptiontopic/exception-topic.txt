@@ -1,0 +1,44 @@
+Exception---Abnormal Scenario---JVM code Crashed
+
+
+	statement---1
+	statement---2
+	statement---3
+	statement---4
+	statement---5---raised--->code exception ---JVM--code crahsed
+	statement---6
+	statement---7
+	statement---8
+	statement---9
+	statement---10
+
+Exception Handling Code:-
+------------------------
+
+	int no1,no2,ans=0;
+	scan no1 no2
+
+	try
+	{
+		// raise exception 
+		ans = no1 / no2;
+
+	}catch(ArithmeticException e)
+	{
+		SOP("catch block handled ArithmeticException");
+	}
+
+	System.out.println("Division : " + ans);
+
+
+
+
+
+
+
+
+
+
+
+
+

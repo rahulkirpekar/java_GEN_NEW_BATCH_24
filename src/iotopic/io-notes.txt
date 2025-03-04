@@ -1,0 +1,20 @@
+File:-
+-----
+	===> InputStream--Read
+	/
+	===> OutputStream---Write
+
+
+[String---convert into Byte]
+---------------------------------
+	1) Byte OrientedWay:-
+	----------------------
+
+		1) FileOutputStream(write)
+		2) FileInputStream(read)
+
+
+	2) character OrientedWay:-
+	---------------------------
+		1) FileWriter(write)
+		2) FileReader(read)

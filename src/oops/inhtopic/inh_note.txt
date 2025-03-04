@@ -1,0 +1,106 @@
+Inheritance:- 
+------------
+	    ===> To reduce code/logic Duplication	
+	    ===> Code/Logic Reusibility	
+		
+	
+			A(addFun())---[Parent/Super/Base]	
+			|
+	------------------------------------
+	|	|	|	|	|
+	B	C	D	E 	F----[Child/Derived/Sub]
+---------------------------------------------------------------------------------------------------
+			Type of Inheritance
+			--------------------		
+							      (Abstrcation)
+								interface
+								   |
+		[class]	 |-----------------------------------------|
+		  |	 |					   |
+  --------------------------------------		 ---------------------
+    |			|	     |			    |		    |	
+1) Single	2) MultiLevel	3) Hierarchical		4) Multiple	5) Hybrid
+---------------------------------------------------------------------------------------------------
+
+			Type of Relation between Java class
+			-------------------------------------
+
+	1) Is-A relation			2) Has-A Relation
+	-----------------			-----------------
+		|					|
+	    Inheritance				   "Aggregation"
+
+---------------------------------------------------------------------------------------------------
+
+	Person IS-A Employee---FALSE 
+
+	Employee IS-A Person---TRUE
+		
+	  Person(Parent)
+	   |
+	Employee(Child)
+
+
+	Employee IS-A Address---FALSE		Employee HAS-A Address
+
+
+Person
+	--name
+Employee
+	id
+	salary
+	orgname
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		A(Parent)
+		|
+		B(Child)
+
+class A
+{
+
+}
+class B extends A
+{
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

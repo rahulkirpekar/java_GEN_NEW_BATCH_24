@@ -1,0 +1,93 @@
+Single character -- char
+
+Multiplle Characters-- char Array---String
+
+java.lang.String
+  |
+String(class):-
+------------------
+
+	class ---methods
+
+	String data---operation---character array---methods---X
+	------------
+	String as object--->data
+	-----------------
+		methods
+
+
+	Type to operation on String
+	---------------------------
+
+1) ImmutableWay		2) MutableWay
+-----------------	-------------------
+  |  				   |	
+ --------------------------------------
+  |				   |
+String				StringBuilder
+				StringBuffer
+
+
+1) ImmutableWay(String):-
+-------------------------
+	1) by string literalway[RAM----HEAP----SCP---"String Constant Pool"]:-
+	---------------------------------------------------------------------
+		String name1 = "royal";	
+		String name2 = "royal";	
+		String name3 = "techno";
+		String name4 = name3;
+	
+		// royaltechno
+		name1 = name1+" "+name3;
+	
+String Object Equality:-
+--------------------------
+	---------------------			---------------------
+	1) referenceBased(==)			2) valuesBased(.equals())
+	---------------------			---------------------
+
+	SOP(name1==name2);// true		SOP(name1.equals(name2));// true
+	SOP(name1==name3);// false		SOP(name1.equals(name3));// false
+	SOP(name3==name4);// true		SOP(name3.equals(name4));// true
+	SOP(name1==name4);// false		SOP(name1.equals(name4));// false
+
+
+
+
+
+	2) by new keyword way[RAM----HEAP]:-
+	------------------------------------
+		String name1 = new String("royal");
+		String name2 = new String("royal");
+		String name3 = new String("techno");
+		String name4 = name3;
+
+
+	---------------------			---------------------
+	1) referenceBased(==)			2) valuesBased(.equals())
+	---------------------			---------------------
+
+	SOP(name1==name2);//false		SOP(name1.equals(name2));// true
+	SOP(name3==name4);//true		SOP(name3.equals(name4));// true
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
