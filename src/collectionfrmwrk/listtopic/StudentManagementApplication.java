@@ -12,6 +12,7 @@ public class StudentManagementApplication
 		Student s = null;
 		int choice = 0;
 		int rno ;
+		
 		do 
 		{	
 			System.out.println("Enter below choice : ");
@@ -23,6 +24,7 @@ public class StudentManagementApplication
 			System.out.println("6) For Exit");
 			choice  = sc.nextInt();
 			
+			mainMenu:
 			switch(choice) 
 			{
 				case 1: s = new Student();
@@ -91,6 +93,58 @@ public class StudentManagementApplication
 						}
 						break;
 				case 5:
+						System.out.println("Enter below choice for Search Student record.");
+						int choiceSearch;
+						System.out.println("1) for Rno");	
+						System.out.println("2) for Name");	
+						System.out.println("3) for Main Menu");	
+						
+						choiceSearch = sc.nextInt();
+						
+						switch(choiceSearch) 
+						{
+							case 1: System.out.println("Enter Rno to search Student record: ");
+							        int rnoSearch = sc.nextInt();
+							        flag = true;
+							        for(int i = 0 ; i< list.size();i++) 
+									{
+										s = list.get(i);
+										if(s.getRno()==rnoSearch) 
+										{
+											flag = false;
+											s.dispData();
+											break;
+										}
+									}
+							        if(flag) 
+							        {
+							        	System.out.println("Give "+rnoSearch+" is not present in Student records.");
+							        }
+									break;		
+							case 2:
+									sc.nextLine();
+									System.out.println("Enter Name to search Student record: ");
+							        String nameSearch = sc.nextLine();
+							        flag = true;
+							        for(int i = 0 ; i< list.size();i++) 
+									{
+										s = list.get(i);
+										if(s.getName().equals(nameSearch)) 
+										{
+											flag = false;
+											s.dispData();
+											break;
+										}
+									}
+							        if(flag) 
+							        {
+							        	System.out.println("Give "+nameSearch+" is not present int Student records.");
+							        }
+									break;	
+							case 3:
+									break mainMenu;
+						}
+						
 						break;
 				case 6: System.out.println("Student Application will be exi...");
 						try 
