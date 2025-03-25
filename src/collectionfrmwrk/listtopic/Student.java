@@ -1,8 +1,9 @@
 package collectionfrmwrk.listtopic;
 
+import java.util.Comparator;
 import java.util.Scanner;
 
-public class Student implements Comparable<Student>
+public class Student 		//implements Comparable<Student>
 {
 	private int rno;
 	private String name;
@@ -58,11 +59,11 @@ public class Student implements Comparable<Student>
 	{
 		System.out.println(rno+" " + name+" " + std); 
 	}
-	@Override
-	public int compareTo(Student s2) 
-	{
-		return getName().compareTo(s2.getName());
-	}
+//	@Override
+//	public int compareTo(Student s2) 
+//	{
+//		return getName().compareTo(s2.getName());
+//	}
 	
 //	@Override
 //	public int compareTo(Student s2) 
