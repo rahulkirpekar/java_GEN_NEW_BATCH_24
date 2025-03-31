@@ -40,16 +40,16 @@ public class TestApp2
 			Student s = itr.next();
 			System.out.println(s.getRno()+" " + s.getName()+" " + s.getStd());
 		}
-		
-		System.out.println("--------------");
-		
-		Collections.sort(list, new NameWiseStudentComparator());
-		
-		itr =	list.listIterator();
-		while(itr.hasNext()) 
-		{
-			Student s = itr.next();
-			System.out.println(s.getRno()+" " + s.getName()+" " + s.getStd());
-		}
+//		
+//		System.out.println("--------------");
+//		
+//		Collections.sort(list, new NameWiseStudentComparator());
+//		
+//		itr =	list.listIterator();
+//		while(itr.hasNext()) 
+//		{
+//			Student s = itr.next();
+//			System.out.println(s.getRno()+" " + s.getName()+" " + s.getStd());
+//		}
 	}
 }

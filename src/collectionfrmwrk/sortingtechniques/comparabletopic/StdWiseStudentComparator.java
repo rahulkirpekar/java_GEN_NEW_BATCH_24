@@ -9,11 +9,11 @@ public class StdWiseStudentComparator implements Comparator<Student>
 	{
 		if(s1.getStd() > s2.getStd())        
 		{                                 
-			return 1;                     
+			return -1;                     
 		       
 		}else if(s1.getStd() < s2.getStd())  
 		{                                 
-			return -1;                    
+			return 1;                    
 		} else                            
 		{                                 
 			return 0;                     
