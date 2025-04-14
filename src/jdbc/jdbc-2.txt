@@ -1,0 +1,40 @@
+Data---Java----insert------SQL
+
+Table Creation:-
+---------------
+CREATE TABLE student
+(
+	rno int PRIMARY KEY AUTO_INCREMENT,
+	name varchar(50),
+	std int,
+	marks int
+);
+
+
+1) Statement(I):-
+--------------------
+
+effectedRows--int--executeUpdate();		executeQuery()--ResultSet--MultipleRows
+		  |				  |
+		Insert				select
+		update
+		delete
+	
+
+Dao--[Data Access Object]	
+---------------------------
+
+	StudentDao------->Student Table
+	insert()
+	update()
+	delete()
+	getAllRecord();
+
+
+
+
+
+
+
+2) PreparedStatement(I):-
+--------------------------

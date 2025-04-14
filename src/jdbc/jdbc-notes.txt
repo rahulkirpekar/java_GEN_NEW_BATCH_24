@@ -1,0 +1,51 @@
+JDBC - Java to Database Connectivity
+-------
+		Data store
+	Database<----connect-----Java Program
+
+Database---MYSQL
+
+JDBC credentials:-
+-----------------
+	1) URLNAME = "jdbc:mysql://localhost:3306/test";
+	2) DRIVERCLASS="com.mysql.cj.jdbc.Driver";
+	3) USERNAME
+	4) PASSWORD
+
+
+      Driver.class  Driver.class       Driver.class	
+	  |		  |		   |
+	odbc.jar   mysql-connector.jar   *.jar
+	  |		  |		   |
+	Oracle		MySql		MSSQLServer
+
+
+
+
+src
+ |
+ ---jdbc
+     |
+     --bean
+     --dao
+     --util
+        |
+	DBConnection.java
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
