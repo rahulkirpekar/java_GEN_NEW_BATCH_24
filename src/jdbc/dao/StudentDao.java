@@ -3,16 +3,21 @@ package jdbc.dao;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Scanner;
 
+import jdbc.bean.StudentBean;
 import jdbc.util.DBConnection;
 
 // StudentDao---Student Table
 public class StudentDao 
 {
 	// insert sql query
-	public int insertStudent() 
+	public int insertStudent(StudentBean sbean) 
 	{
-		String insertQuery = "INSERT INTO student(name,std,marks) VALUES('rahul',12,80)";
+		String insertQuery = "INSERT INTO student(name,std,marks) VALUES('"+ sbean.getName() +"',"+ sbean.getStd() +","+ sbean.getMarks() +")";
+		
+		System.out.println("insertQuery : " + insertQuery);
+		
 		Statement stmt = null; 
 		int rowsAffected = 0 ;
 		
@@ -60,8 +65,18 @@ public class StudentDao
 		//----------INSERT Student----------
 		StudentDao studentDao = new StudentDao();
 		
+		Scanner sc  = new Scanner(System.in);
 		
-		int rowsAffected = studentDao.insertStudent();
+		System.out.println("Enter Name : ");
+		String name = sc.nextLine();
+		System.out.println("Enter Std : ");
+		int std = sc.nextInt();
+		System.out.println("Enter Marks : ");
+		int marks= sc.nextInt();
+		
+		StudentBean sbean = new StudentBean(0, name, std, marks);
+		
+		int rowsAffected = studentDao.insertStudent(sbean);
 		
 		if (rowsAffected > 0) 
 		{
