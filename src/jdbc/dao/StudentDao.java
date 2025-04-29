@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import jdbc.bean.StudentBean;
@@ -104,20 +105,20 @@ public class StudentDao
 	}
 	
 	// select sql query
-	public void getAllStudentRecords() 
+	public ArrayList<StudentBean> getAllStudentRecords() 
 	{
 		String selectQuery = "SELECT rno, name, std, marks  from student";
 		Connection conn = DBConnection.getConnection();
 		Statement stmt = null;
 		ResultSet rs = null;
+		StudentBean sbean = null;
+		ArrayList<StudentBean> list = new ArrayList<StudentBean>();
 		if (conn!=null) 
 		{
 			try 
 			{
 				stmt = conn.createStatement();
-			
 				rs = stmt.executeQuery(selectQuery);
-				
 				while(rs.next()) 
 				{
 					int rno = rs.getInt(1);// rs.getInt("rno");
@@ -125,7 +126,9 @@ public class StudentDao
 					int std = rs.getInt(3);// rs.getInt("std");
 					int marks = rs.getInt(4);// rs.getInt("marks");
 				
-					System.out.println(rno+" " + name+" " + std+" " + marks); 
+					sbean =  new StudentBean(rno, name, std, marks);
+					list.add(sbean);
+//					System.out.println(rno+" " + name+" " + std+" " + marks); 
 				}
 			} catch (SQLException e) 
 			{
@@ -135,15 +138,54 @@ public class StudentDao
 		{
 			System.out.println("StudentDao--getAllStudentRecords()--Db not connected");
 		}
+		return list;
+	}
+	public StudentBean getStudentByRno(int rno) 
+	{
+		String selectStudentByRno = "SELECT * FROM student WHERE rno = "+rno;
+		Connection conn = DBConnection.getConnection();
+		Statement stmt = null;
+		StudentBean s = null; 
+		if (conn!=null) 
+		{
+			try 
+			{
+				stmt = conn.createStatement();
+				ResultSet rs = stmt.executeQuery(selectStudentByRno);
+				
+				rs.next();
+				int rno1 = rs.getInt(1);
+				String name = rs.getString(2);
+				int std = rs.getInt(3);
+				int marks = rs.getInt(4);
+						
+				s = new StudentBean(rno1, name, std, marks);
+			} catch (SQLException e) 
+			{
+				e.printStackTrace();
+			}
+		} else 
+		{
+			System.out.println("StudentDao -- getStudentByRno() db not connected");
+		}
+		return s;
 	}
 	public static void main(String[] args) 
 	{
 		StudentDao studentDao = new StudentDao();
+
+		StudentBean s = studentDao.getStudentByRno(15);
 		
-		studentDao.getAllStudentRecords();
+		System.out.println(s.getRno()+" " + s.getName()+" " + s.getStd()+" " + s.getMarks());
 		
+		/*			
+		ArrayList<StudentBean> list = studentDao.getAllStudentRecords();
 		
-/*			
+		for (int i = 0; i < list.size(); i++) 
+		{
+			StudentBean s = list.get(i);
+			System.out.println(s.getRno()+" " + s.getName()+" " + s.getStd()+" " + s.getMarks());
+		}
 		
 		Scanner sc  = new Scanner(System.in);
 		
